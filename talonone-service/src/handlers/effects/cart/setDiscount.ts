@@ -39,7 +39,7 @@ const setDiscountHandler = (
       action: 'changeCustomLineItemMoney',
       customLineItemId: isDiscountApplied.id,
       money: {
-        centAmount: value * -1,
+        centAmount: Math.round(value * -1 * 100),
         type: 'centPrecision',
         currencyCode,
         fractionDigits: 2
@@ -51,7 +51,7 @@ const setDiscountHandler = (
     custom,
     name: { [CTP_PRODUCT_LOCALE]: name }, // we need to handle localization
     money: {
-      centAmount: value * -1,
+      centAmount: Math.round(value * -1 * 100),
       type: 'centPrecision',
       currencyCode,
       fractionDigits: 2

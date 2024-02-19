@@ -26,7 +26,7 @@ export const cartEventsHandler = async (
         name: lineItem.name[CTP_PRODUCT_LOCALE], // TODO: handle localization
         sku: lineItem.variant.sku,
         quantity: lineItem.quantity,
-        price: lineItem.price.value.centAmount
+        price: lineItem.price.value.centAmount/100
       }))
     })
 
