@@ -59,7 +59,7 @@ const setDiscountHandler = (
     slug: nameToSlug(name),
     taxCategory: {
       typeId: 'tax-category',
-      id: taxCategoryId
+      key: taxCategoryId
     }
   }
 }
